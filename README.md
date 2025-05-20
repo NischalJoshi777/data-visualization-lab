@@ -11,10 +11,12 @@ The dataset being used has 8 columns [ Store, Date, Weekly_Sales, Holiday_Flag, 
 ## Key Steps and Techniques
 
 ### Loading Data: 
-   Loaded dataset using `pandas.read_csv()`
-   Displayed the first few rows using `.head()`
+  <img width="807" alt="head" src="https://github.com/user-attachments/assets/2cb5387b-a219-465a-9741-692df3fd4993" />
+
+   Loaded dataset using `pandas.read_csv()` and displayed the first few rows using `.head()`
 
 ### Data Visualization
+  <img width="807" alt="data visualization" src="https://github.com/user-attachments/assets/1aaba84a-5cce-44ec-bd90-7ba971df4262" />
 
 - **Scatter Plot of Weekly Sales vs Fuel Price.**:
     It Represents the relation between weekly sales in x-axis and fuel prices in y-axis.
@@ -29,12 +31,17 @@ The dataset being used has 8 columns [ Store, Date, Weekly_Sales, Holiday_Flag, 
     
 
 ### Data Preprocessing
-- **Missing Values**: 
+- **Missing Values**:
+
+  <img width="807" alt="missing_values" src="https://github.com/user-attachments/assets/df29ffd0-61bf-4688-9296-5b281e9395de" />
+  
     The missing value is detected using .isnull() method. 
     There are total of 6 data missing in the Fuel_Price Column. 
     The missing value of items are replaced with the mean value. 
     
 - **Outliers**: Detected and removed using IQR technique
+  <img width="755" alt="outliers-" src="https://github.com/user-attachments/assets/e90ccdf2-1d04-42bc-a10d-1a5b222b1e00" />
+
     To improve the quality, the outliers from the Weekly_Sales column are removed using InterQuartile Range (IQR) method.
     The Q1 (25th Percentile) is 553,350.10 and Q3 the (75th Percentile) value is 1420158.66
     IQR (Q3-Q1) = 866,808.55
@@ -52,21 +59,45 @@ The dataset being used has 8 columns [ Store, Date, Weekly_Sales, Holiday_Flag, 
     
     The removal ensures a more accurate analysis.
     
-- **Data Reduction**: 
+- **Data Reduction**:
+  
+  <img width="564" alt="data_reduction" src="https://github.com/user-attachments/assets/f90e0210-a194-48da-ab3f-87805127db2a" />
+
     For data reduction 50 percent of the data were used as sampled.
     Also, dimension elimination was performed by dropping a less relevant column i.e CPI column.
 
-- **Scaling/Discretization**: 
+- **Scaling/Discretization**:
+  
+  <img width="793" alt="data-before-scaling" src="https://github.com/user-attachments/assets/41b75ea8-6d4a-4ffc-a1b5-f58429d3b77a" />
+  
     Applied Min-Max Scaling and Z-score scaling.
     The Min-Max Scaling is calculated as (X-Xmin)/(Xmax-Xmin) and the generated value stays between 0 to 1.
-    
+    The Z-score standardization is calculated as (X−μ)/σ
+​	
+  <img width="793" alt="after_scaling_z_score_standardization" src="https://github.com/user-attachments/assets/2631e17e-2586-448d-ad44-3022b3ff5edd" />
+
+    The Discretization was conducted in the Temperature column and was categorized as Low, High and Medium.
+  
+  <img width="793" alt="discretization_temperature" src="https://github.com/user-attachments/assets/29bd03a0-9927-459f-af86-d2c4820cacc7" />
 
 ### Statistical Analysis
-- Computed `.info()` and `.describe()` for dataset overview.
-- Calculated central tendency measures: mean, median, mode.
-- Computed dispersion metrics: range, IQR, variance, standard deviation.
 
-- Generated a correlation matrix to identify relationships between numerical features.
+  <img width="793" alt="info_describe" src="https://github.com/user-attachments/assets/5ac0df69-3739-468e-a38b-b832631e3af1" />
+  
+  Computed `.info()` and `.describe()` for dataset overview.
+  
+  <img width="793" alt="central_tendency_measure" src="https://github.com/user-attachments/assets/eaae810d-d1c6-4e77-a829-c31b3f2785b4" />
+  
+  Calculated central tendency measures: mean, median, mode.
+  
+  <img width="603" alt="dispersion" src="https://github.com/user-attachments/assets/012a4d9b-d1ca-42f8-9771-663e57100e66" />
+  
+  Computed dispersion metrics: range, IQR, variance, standard deviation.
+
+  Generated a correlation matrix to identify relationships between numerical features.
+ 
+  <img width="603" alt="correlation_matrix" src="https://github.com/user-attachments/assets/f068dee3-c164-468a-bbb2-06be7cd0ece1" />
+
   The correlation matrix value ranges from -1 to 1. 
   +1: Indicates perfect positive correlation.
    0: Indicates no linear correlation.
