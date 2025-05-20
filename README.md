@@ -1,8 +1,11 @@
 # MSCS 634 Advanced Data Mining and Big Data
 # [Lab 1: Data Visualization, Data Preprocessing, and Statistical Analysis]
 
-**Name:** Nischal JOshi
-**Lab Title:** Lab 1 - Data Visualization, Data Preprocessing, and Statistical Analysis Using Python in Jupyter Notebook
+### Author:
+  Nischal Joshi
+  
+### Lab Title:
+  Lab 1 - Data Visualization, Data Preprocessing, and Statistical Analysis Using Python in Jupyter Notebook
 
 ## Lab Overview
 The lab performs data analysis on a dataset extracted from the kaggle for walmart sales. The goal of this lab is to load the dataset, visualize it and preprocess to perform  statistical analysis to extract insights.
